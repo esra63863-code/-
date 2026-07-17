@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ShareCare – السوق الاجتماعي</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-container">
+    <!-- الهيدر -->
+    <header class="header">
+      <div class="logo">Share<span>Care</span></div>
+      <div class="user-area" id="userArea"></div>
+    </header>
+
+    <!-- التنقل -->
+    <nav class="nav-tabs">
+      <a href="home.html">🏠 الرئيسية</a>
+      <a href="market.html" class="active">🔄 السوق الاجتماعي</a>
+      <a href="add.html">➕ إضافة فائض</a>
+      <a href="stats.html">📊 الأثر الاجتماعي</a>
+    </nav>
+
+    <!-- الفلاتر -->
+    <div class="card">
+      <div class="card-title">🔍 فلترة</div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;">
+        <select id="filterCategory" style="flex:1;min-width:120px;">
+          <option value="">كل التصنيفات</option>
+          <option value="medicine">أدوية</option>
+          <option value="clothing">ملابس</option>
+          <option value="food">طعام</option>
+          <option value="tools">أدوات</option>
+          <option value="other">أخرى</option>
+        </select>
+        <select id="filterLocation" style="flex:1;min-width:120px;">
+          <option value="">كل المدن</option>
+          <option value="الخرطوم">الخرطوم</option>
+          <option value="أم درمان">أم درمان</option>
+          <option value="بحري">بحري</option>
+          <option value="مدني">مدني</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- التبويبات -->
+    <div style="display:flex;gap:6px;margin-bottom:16px;">
+      <button class="btn gold market-tab active" data-type="donation" onclick="renderMarketTab('donation')">📦 تبرعات</button>
+      <button class="btn outline market-tab" data-type="request" onclick="renderMarketTab('request')">📝 طلبات</button>
+    </div>
+
+    <!-- قائمة العناصر -->
+    <div id="marketItems" class="grid-2"></div>
+  </div>
+
+  <div id="toastContainer" class="toast-container"></div>
+  <script src="script.js"></script>
+</body>
+</html>
