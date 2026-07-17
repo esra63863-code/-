@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ShareCare – الأثر الاجتماعي</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-container">
+    <!-- الهيدر -->
+    <header class="header">
+      <div class="logo">Share<span>Care</span></div>
+      <div class="user-area" id="userArea"></div>
+    </header>
+
+    <!-- التنقل -->
+    <nav class="nav-tabs">
+      <a href="home.html">🏠 الرئيسية</a>
+      <a href="market.html">🔄 السوق الاجتماعي</a>
+      <a href="add.html">➕ إضافة فائض</a>
+      <a href="stats.html" class="active">📊 الأثر الاجتماعي</a>
+    </nav>
+
+    <div class="card">
+      <div class="card-title">🌍 أثر ShareCare على المجتمع</div>
+      <div class="grid-2">
+        <div class="stat-box">
+          <span class="stat-number" id="statTotalItems">0</span>
+          <span class="stat-label">إجمالي العناصر المتداولة</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-number" id="statDonationsCount">0</span>
+          <span class="stat-label">تبرعات</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-number" id="statRequestsCount">0</span>
+          <span class="stat-label">طلبات تم تلبيتها</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-number" id="statUsersCount">0</span>
+          <span class="stat-label">أعضاء نشطون</span>
+        </div>
+        <div class="stat-box" style="grid-column: span 2;">
+          <span class="stat-number" id="statBeneficiaries">0</span>
+          <span class="stat-label">عدد المستفيدين (تقديري)</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">📊 توزيع العناصر حسب التصنيف</div>
+      <div id="categoryStats"></div>
+    </div>
+
+    <div class="card" style="text-align:center;color:#6a7a6a;font-size:0.9rem;">
+      💚 كل تبرع يصنع فرقاً في حياة شخص ما. شكراً لمشاركتك في هذا الأثر الإنساني.
+    </div>
+  </div>
+
+  <div id="toastContainer" class="toast-container"></div>
+  <script src="script.js"></script>
+</body>
+</html>
