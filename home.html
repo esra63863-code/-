@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ShareCare – الرئيسية</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-container">
+    <!-- الهيدر -->
+    <header class="header">
+      <div class="logo">Share<span>Care</span></div>
+      <div class="user-area" id="userArea"></div>
+    </header>
+
+    <!-- التنقل -->
+    <nav class="nav-tabs">
+      <a href="home.html" class="active">🏠 الرئيسية</a>
+      <a href="market.html">🔄 السوق الاجتماعي</a>
+      <a href="add.html">➕ إضافة فائض</a>
+      <a href="stats.html">📊 الأثر الاجتماعي</a>
+    </nav>
+
+    <!-- إحصائيات سريعة -->
+    <div class="grid-3">
+      <div class="card" style="text-align:center;">
+        <span class="stat-number" id="statDonations">0</span>
+        <span class="stat-label">📦 تبرعات</span>
+      </div>
+      <div class="card" style="text-align:center;">
+        <span class="stat-number" id="statRequests">0</span>
+        <span class="stat-label">📝 طلبات</span>
+      </div>
+      <div class="card" style="text-align:center;">
+        <span class="stat-number" id="statUsers">0</span>
+        <span class="stat-label">👥 متبرعون</span>
+      </div>
+    </div>
+
+    <!-- آخر العناصر -->
+    <div class="card">
+      <div class="card-title">📋 آخر الإضافات</div>
+      <div id="recentItems" class="grid-2"></div>
+    </div>
+
+    <!-- الأثر الاجتماعي (مختصر) -->
+    <div class="card">
+      <div class="card-title">🌍 الأثر الاجتماعي</div>
+      <div class="grid-3">
+        <div><span class="stat-number" id="impactDonations">0</span><span class="stat-label"> عنصر تم إعادة استخدامه</span></div>
+        <div><span class="stat-number" id="impactRequests">0</span><span class="stat-label"> طلب تم تلبيته</span></div>
+        <div><span class="stat-number" id="impactBeneficiaries">0</span><span class="stat-label"> مستفيد</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="toastContainer" class="toast-container"></div>
+  <script src="script.js"></script>
+</body>
+</html>
