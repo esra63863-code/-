@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ShareCare – إضافة فائض</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-container">
+    <!-- الهيدر -->
+    <header class="header">
+      <div class="logo">Share<span>Care</span></div>
+      <div class="user-area" id="userArea"></div>
+    </header>
+
+    <!-- التنقل -->
+    <nav class="nav-tabs">
+      <a href="home.html">🏠 الرئيسية</a>
+      <a href="market.html">🔄 السوق الاجتماعي</a>
+      <a href="add.html" class="active">➕ إضافة فائض</a>
+      <a href="stats.html">📊 الأثر الاجتماعي</a>
+    </nav>
+
+    <div class="card">
+      <div class="card-title">➕ إضافة فائض جديد أو طلب مساعدة</div>
+      <form id="addForm">
+        <div style="display:flex;gap:16px;flex-wrap:wrap;margin-bottom:12px;">
+          <label style="display:flex;align-items:center;gap:6px;font-weight:600;">
+            <input type="radio" name="type" value="donation" checked /> 📦 تبرع
+          </label>
+          <label style="display:flex;align-items:center;gap:6px;font-weight:600;">
+            <input type="radio" name="type" value="request" /> 📝 طلب مساعدة
+          </label>
+        </div>
+
+        <input type="text" id="title" placeholder="عنوان (مثال: أدوية سعال، ملابس أطفال، ...)" required />
+        <select id="category" required>
+          <option value="">اختر التصنيف</option>
+          <option value="medicine">أدوية</option>
+          <option value="clothing">ملابس</option>
+          <option value="food">طعام</option>
+          <option value="tools">أدوات</option>
+          <option value="other">أخرى</option>
+        </select>
+        <input type="text" id="location" placeholder="المدينة / الولاية" required />
+        <textarea id="description" placeholder="وصف تفصيلي للعنصر (الحالة، الكمية، ...)" required></textarea>
+        <div id="conditionGroup">
+          <input type="text" id="condition" placeholder="الحالة (ممتاز، جيد، مستعمل)" />
+        </div>
+        <input type="text" id="contact" placeholder="رقم التواصل (واتساب / هاتف)" required />
+        <button type="submit" class="btn gold" style="width:100%;justify-content:center;padding:14px;">✅ نشر</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="toastContainer" class="toast-container"></div>
+  <script src="script.js"></script>
+</body>
+</html>
